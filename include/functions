@@ -95,10 +95,10 @@ function hosts() {
     echo "Local:" $cur_version
     echo "Cloud:" $cloud_version
   else
-    build_hosts
     if (( $(echo "$cur_version < $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
       echo "Downloading:" $cloud_version
       aws s3 cp s3://ballantine-dev/hosts.base ~/hosts.base
+      build_hosts
     else
       if (( $(echo "$cur_version == $cloud_version" | bc -l))); then
         echo "You are up to date."
