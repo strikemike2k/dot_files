@@ -50,10 +50,11 @@ function ymlP() {
 function yml() {
   REPO=$(basename -s .git `git config --get remote.origin.url`)
   cur_version=$(sed -n '2p' config/application.yml | egrep -o '[0-9]+\.[0-9]+')
+  cloud_version=$(aws s3 cp s3://ballantine-dev/YMLs/$REPO/application.yml - | sed -n '2p' | egrep -o '[0-9]+\.[0-9]+')
   if [[ $@ == "--version" ]] || [[ $@ == "-v" ]]; then
-    echo "You are at:" $cur_version
+    echo "Local:" $cur_version
+    echo "Cloud:" $cloud_version
   else
-    cloud_version=$(aws s3 cp s3://ballantine-dev/YMLs/$REPO/application.yml - | sed -n '2p' | egrep -o '[0-9]+\.[0-9]+')
     if (( $(echo "$cur_version < $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
       echo "Downloading:" $cloud_version
       aws s3 cp s3://ballantine-dev/YMLs/$REPO/application.yml config/application.yml
@@ -67,6 +68,50 @@ function yml() {
       echo "Cloud:" $cloud_version
     fi
   fi
+}
+
+# hosts sync
+function hostsP() {
+  build_hosts
+  cur_version=$(sed -n '1p' ~/hosts.base | egrep -o '[0-9]+\.[0-9]+')
+  cloud_version=$(aws s3 cp s3://ballantine-dev/hosts.base - | sed -n '1p' | egrep -o '[0-9]+\.[0-9]+')
+  if (( $(echo "$cur_version > $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
+    echo "Uploading:" $cur_version
+    aws s3 cp ~/hosts.base s3://ballantine-dev/hosts.base --sse
+  else
+    if (( $(echo "$cur_version == $cloud_version" | bc -l))); then
+      echo "The cloud already has your version."
+    else
+      echo "You are behind the times."
+    fi
+    echo "Local:" $cur_version
+    echo "Cloud:" $cloud_version
+  fi
+}
+function hosts() {
+  build_hosts
+  cur_version=$(sed -n '1p' ~/hosts.base | egrep -o '[0-9]+\.[0-9]+')
+  cloud_version=$(aws s3 cp s3://ballantine-dev/hosts.base - | sed -n '1p' | egrep -o '[0-9]+\.[0-9]+')
+  if [[ $@ == "--version" ]] || [[ $@ == "-v" ]]; then
+    echo "Local:" $cur_version
+    echo "Cloud:" $cloud_version
+  else
+    if (( $(echo "$cur_version < $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
+      echo "Downloading:" $cloud_version
+      aws s3 cp s3://ballantine-dev/hosts.base ~/hosts.base
+    else
+      if (( $(echo "$cur_version == $cloud_version" | bc -l))); then
+        echo "You are up to date."
+      else
+        echo "You have a newer version."
+      fi
+      echo "Local:" $cur_version
+      echo "Cloud:" $cloud_version
+    fi
+  fi
+}
+function build_hosts() {
+  sudo sh -c "cat ~/hosts.base ~/hosts.personal > /etc/hosts"
 }
 
 function rsb() {
