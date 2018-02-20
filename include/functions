@@ -89,13 +89,13 @@ function hostsP() {
   fi
 }
 function hosts() {
-  build_hosts
   cur_version=$(sed -n '1p' ~/hosts.base | egrep -o '[0-9]+\.[0-9]+')
   cloud_version=$(aws s3 cp s3://ballantine-dev/hosts.base - | sed -n '1p' | egrep -o '[0-9]+\.[0-9]+')
   if [[ $@ == "--version" ]] || [[ $@ == "-v" ]]; then
     echo "Local:" $cur_version
     echo "Cloud:" $cloud_version
   else
+    build_hosts
     if (( $(echo "$cur_version < $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
       echo "Downloading:" $cloud_version
       aws s3 cp s3://ballantine-dev/hosts.base ~/hosts.base
