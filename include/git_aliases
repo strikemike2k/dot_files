@@ -43,7 +43,6 @@ alias overview='open "https://github.com/strikemike2k?tab=overview&from='$(date 
 alias gpf="git push fury master"
 
 # Git autocomplete
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . ~/.git-completion.bash
   . $(brew --prefix)/etc/bash_completion
   __git_complete gco _git_checkout
@@ -52,5 +51,4 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   __git_complete gpo _git_checkout
   __git_complete gpn _git_checkout
   __git_complete gbd _git_checkout
-fi
 
