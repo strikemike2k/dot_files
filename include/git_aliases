@@ -44,7 +44,7 @@ alias gpf="git push fury master"
 
 # Git autocomplete
   . ~/.git-completion.bash
-  . $(brew --prefix)/etc/bash_completion
+  # . $(brew --prefix)/etc/bash_completion
   __git_complete gco _git_checkout
   __git_complete gm  _git_checkout
   __git_complete gPo _git_checkout
