@@ -43,7 +43,6 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'heartsentwined/vim-emblem'        " emblem syntax & indent
   Plugin 'honza/vim-snippets'               " Snippets to autocomplete from
   Plugin 'idbrii/vim-mark'                  " Allow for multiple marks
-  Plugin 'johngrib/vim-game-code-break'     " Pong for Vim, just run :VimGameCodeBreak
   Plugin 'jordwalke/flatlandia'
   Plugin 'jtratner/vim-flavored-markdown'   " Markdown display good
   Plugin 'justinmk/vim-sneak'               " Sneaky movement s{char}{char}
