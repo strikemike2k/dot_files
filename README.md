@@ -5,14 +5,14 @@ Used to keep my computers and mind in sync.
 
 ## Setup
 Using Vundle https://github.com/VundleVim/Vundle.vim
-``` bash
+```bash
 cd ~
 git clone https://github.com/strikemike2k/dot_files
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 From your `~/` home directory, symlink the dot_files:
-``` bash
+```bash
 ln -s dot_files/.bash_profile
 ln -s dot_files/.vimrc
 ln -s dot_files/.gitconfig
@@ -24,13 +24,18 @@ ln -s dot_files/.agignore
 ```
 
 Set up vim folders:
-``` bash
+```bash
 mkdir ~/.vim/files && mkdir ~/.vim/files/{backup,info,swap,undo}
 ```
 
-Install all vim plugins
-``` bash
+Install all vim plugins:
+```bash
 vim +PluginInstall +qall
+```
+
+Load your profile settings:
+```bash
+source ~/.bash_profile
 ```
 
 View the /includes folder for extended functionality.
