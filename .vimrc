@@ -18,6 +18,7 @@ let s:bundle_dir = $v.'/bundle'
 
   " initialize Vundle and rebuild helptags
   set rtp+=~/.vim/bundle/Vundle.vim
+  set rtp+=/usr/local/opt/fzf
   call vundle#begin()
 
   Plugin 'airblade/vim-gitgutter'           " git diff in gutter
@@ -31,7 +32,6 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'christoomey/vim-conflicted'       " Git conflict resolution
   Plugin 'christoomey/vim-sort-motion'      " Sort lines with gs, ie: gs20j => sort 20 lines, gsip => Sort the current paragraph, gsi( => Sort within parenthesis. (b, c, a) would become (a, b, c)
   Plugin 'christoomey/vim-tmux-navigator'   " easy navigation b/w vim & tmux
-  Plugin 'ctrlpvim/ctrlp.vim'               " fuzzy file finder
   Plugin 'dahu/vim-fanfingtastic'           " Extend tT and fF to multiple lines
   Plugin 'elixir-lang/vim-elixir'
   Plugin 'ervandew/supertab'
@@ -45,6 +45,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'idbrii/vim-mark'                  " Allow for multiple marks
   Plugin 'jordwalke/flatlandia'
   Plugin 'jtratner/vim-flavored-markdown'   " Markdown display good
+  Plugin 'junegunn/fzf.vim'
   Plugin 'justinmk/vim-sneak'               " Sneaky movement s{char}{char}
   Plugin 'kana/vim-textobj-user'            " Allows ruby 'ir' 'ar' commands for method selection
   " Plugin 'lifepillar/vim-cheat40'           " 40 column cheat sheet, open with <leader>?
@@ -233,8 +234,11 @@ let s:bundle_dir = $v.'/bundle'
     " colorscheme solarized  " solarized colorscheme
     colorscheme flatlandia   " flatlandia colorscheme
 
-"= Utilities ======================================================================================
+    hi LineNr guifg=#515253 guibg=#2c2f31 guisp=#2c2f31 gui=NONE ctermfg=241 ctermbg=236 cterm=NONE
+    hi Comment guifg=#60666b guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
+    hi Todo guifg=#798188 guibg=NONE guisp=NONE gui=bold ctermfg=15 ctermbg=1 cterm=bold
 
+"= Utilities ======================================================================================
   set noswapfile                     " don't create swap files
   set autowrite                      " write the old file out when switching between files
   autocmd BufWritePre * :%s/\s\+$//e " auto strip whitespace on save
@@ -377,15 +381,15 @@ let s:bundle_dir = $v.'/bundle'
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-  "- Control-P ------------------------------------------------------------------------------------
-  " Don't use caching
-  let g:ctrlp_use_caching = 0
-  "if executable('ag')
-  "  let g:ctrlp_user_command = 'Ag %s -l -i -U --hidden -g ""'
-  "endif
-  let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git\|bin\|public\|solr\|tmp\|vendor\|node_modules',
-    \ 'file': '\.DS_Store\|\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.min\.js$' }
+  "= FZF =========================================================================
+  let g:fzf_buffers_jump = 1
+
+  " Open FZF
+  noremap <C-p> :Files<CR>
+
+  " Default fzf layout
+  " - down / up / left / right
+  let g:fzf_layout = { 'down': '~25%' }
 
   "- JSX ------------------------------------------------------------------------------------
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files
