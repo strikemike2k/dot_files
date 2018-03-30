@@ -18,7 +18,8 @@ let s:bundle_dir = $v.'/bundle'
 
   " initialize Vundle and rebuild helptags
   set rtp+=~/.vim/bundle/Vundle.vim
-  set rtp+=/usr/local/opt/fzf
+  " set rtp+=/usr/local/opt/fzf
+  set rtp+=~/.fzf
   call vundle#begin()
 
   Plugin 'airblade/vim-gitgutter'           " git diff in gutter
