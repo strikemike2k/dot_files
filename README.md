@@ -28,6 +28,12 @@ Set up vim folders:
 mkdir ~/.vim/files && mkdir ~/.vim/files/{backup,info,swap,undo}
 ```
 
+Install fzf (fuzzy find)
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 Install all vim plugins:
 ```bash
 vim +PluginInstall +qall
