@@ -38,7 +38,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'ervandew/supertab'
   Plugin 'garbas/vim-snipmate'              " expand code snippits with <tab>
   Plugin 'gmarik/Vundle.vim'                " let Vundle manage Vundle, required
-  Plugin 'godlygeek/csapprox'               " better gvim color support
+  " Plugin 'godlygeek/csapprox'               " better gvim color support
   " Plugin 'godlygeek/tabular'                " for indentation
   Plugin 'groenewege/vim-less'              " Less syntax highlighting / indentation
   Plugin 'heartsentwined/vim-emblem'        " emblem syntax & indent
@@ -87,7 +87,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'wesQ3/vim-windowswap'             " window swapping
 
   Plugin 'ryanoasis/vim-devicons'           " Dev File Icons
-  Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+  " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plugin 'Xuyuanp/nerdtree-git-plugin'      " NERDTree display changes via git
 
   " end Vundle init (required )"
