@@ -33,7 +33,7 @@ alias gPom="git push origin master"
 alias gPos="git push origin staging"
 alias gPo=" git push origin"
 alias gPoN="git push origin --no-verify"
-alias gpn=" git push --set-upstream origin --no-verify"
+alias gPn=" git push --set-upstream origin --no-verify"
 alias gm="  git merge"
 alias gms=" git merge staging"
 alias gmm=" git merge master"
@@ -41,7 +41,7 @@ alias gl=" git log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(
 alias glm=" git log --author='$(git config user.name)' --pretty=format:'%C(yellow)%h%C(reset) [%C(green)%ar%C(reset)] %s'"
 alias overview='open "https://github.com/strikemike2k?tab=overview&from='$(date '+%Y-%m-%d')'"'
 # GemFury
-alias gpf="git push fury master"
+alias {gPf,gPfm}="git push fury master"
 
 # Git autocomplete
   . ~/.git-completion.bash
@@ -50,6 +50,6 @@ alias gpf="git push fury master"
   __git_complete gm  _git_checkout
   __git_complete gPo _git_checkout
   __git_complete gpo _git_checkout
-  __git_complete gpn _git_checkout
+  __git_complete gPn _git_checkout
   __git_complete gbd _git_checkout
 
