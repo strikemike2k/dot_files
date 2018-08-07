@@ -23,8 +23,8 @@ alias fing="sudo"
 alias Kill="sudo kill -s SIGTERM "
 
 # Quick edit
-alias oh='   sudo vim ~/hosts.base'
-alias ohp='  sudo vim ~/hosts.personal'
+alias oh='   sudo vim ~/hosts.base && build_hosts'
+alias ohp='  sudo vim ~/hosts.personal && build_hosts'
 alias bh='   build_hosts'
 alias ossh=' sudo vim ~/.ssh/config'
 alias ovim=" vim ~/.vimrc"
