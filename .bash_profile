@@ -9,6 +9,8 @@ fi
 HISTCONTROL=ignoreboth
 shopt -s histappend dotglob
 
+alias g='grep -rnw . -e'
+
 # Required
 export EDITOR=vim
 alias vi=vim
@@ -46,6 +48,10 @@ alias sd="  ssh ubuntu@dev"
 alias sp="  ssh ubuntu@nsr"
 alias jsp=" ssh ubuntu@journal"
 alias spr=" ssh ubuntu@rails"
+
+# SSH
+alias smaxapi='ssh -t root@45.79.108.188'
+alias smaxwp=' ssh -t root@198.58.126.101'
 
 # Time
 alias retime="sudo ntpdate time.nist.gov"
