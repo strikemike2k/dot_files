@@ -392,6 +392,8 @@ let s:bundle_dir = $v.'/bundle'
   " - down / up / left / right
   let g:fzf_layout = { 'down': '~25%' }
 
+  let $FZF_DEFAULT_COMMAND= 'ag -U -g ""'
+
   "- JSX ------------------------------------------------------------------------------------
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
