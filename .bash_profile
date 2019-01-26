@@ -1,10 +1,6 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Show folder in tabs
-if [ $ITERM_SESSION_ID -a -z "$PROMPT_COMMAND" ]; then
-  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
-fi
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 shopt -s histappend dotglob
