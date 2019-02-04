@@ -140,7 +140,7 @@ function build_hosts() {
 function databaseP() {
   RESULT=`mysql --user=root --skip-column-names -e "SHOW DATABASES LIKE '$1'"`
   if [ "$RESULT" == $1 ]; then
-    mysqldump --user=root --databases $1 | gzip > ~/$1.sql.gz
+    mysqldump --column-statistics=0 --user=root --databases $1 | gzip > ~/$1.sql.gz
     aws s3 cp ~/$1.sql.gz s3://ballantine-dev/databases/$1.sql.gz
     rm ~/$1.sql.gz
   else
