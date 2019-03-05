@@ -71,7 +71,7 @@ function yml() {
     echo "Cloud:" $cloud_version
   elif [[ $@ == "--diff" ]] || [[ $@ == "-d" ]]; then
     aws s3 cp s3://ballantine-dev/YMLs/$REPO/application.yml yml.tmp
-    git --no-pager diff --color=auto --no-ext-diff --no-index config/application.yml yml.tmp
+    git --no-pager diff --color=auto --no-ext-diff --no-index yml.tmp config/application.yml
     rm yml.tmp
   else
     if (( $(echo "$cur_version < $cloud_version" | bc -l))) || [[ $@ == "--force" ]]; then
