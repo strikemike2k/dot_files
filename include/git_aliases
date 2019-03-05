@@ -2,6 +2,7 @@
 
 alias gs="  git status"
 alias gd="  clear && git diff"
+alias gds="  clear && git diff --staged"
 alias gc="  git commit"
 alias gcam="git commit --amend "
 alias gcm='git commit -m '
