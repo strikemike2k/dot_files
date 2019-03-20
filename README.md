@@ -44,6 +44,11 @@ Load your profile settings:
 source ~/.bash_profile
 ```
 
+Have `git` remember your credentials:
+```bash
+git config credential.helper store
+```
+
 View the /includes folder for extended functionality.
 * Functions --------- New terminals, Pull requests, YML/hosts syncs and IP binding.
   * Aliases
