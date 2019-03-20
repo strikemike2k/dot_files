@@ -90,7 +90,8 @@ white=$(tput setaf 7) #37
 red=$(tput setaf 1)  #31
 green=$(tput setaf 2) #32
 yellow=$(tput setaf 3) #33
+purple=$(tput setaf 5)
 
 source ~/.git-prompt.sh
 # PS1 uses [] so it doesn't overwrite long command lines and now does word wrap
-export PS1="\[$cyan\]`whoami`@`hostname` \[$red\]\W\[\e[m\]\[$green\]\$(__git_ps1)\[$yellow\]\$ \[$white\]"
+export PS1="\[$cyan\]`whoami`\[$yellow\]@\[$purple\]`hostname` \[$red\]\W\[\e[m\]\[$green\]\$(__git_ps1)\[$yellow\]\$ \[$white\]"
