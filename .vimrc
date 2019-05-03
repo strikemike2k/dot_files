@@ -48,6 +48,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'jtratner/vim-flavored-markdown'   " Markdown display good
   Plugin 'junegunn/fzf.vim'
   Plugin 'justinmk/vim-sneak'               " Sneaky movement s{char}{char}
+  Plugin 'jwalton512/vim-blade'             " Support Blade syntax
   Plugin 'kana/vim-textobj-user'            " Allows ruby 'ir' 'ar' commands for method selection
   " Plugin 'lifepillar/vim-cheat40'           " 40 column cheat sheet, open with <leader>?
   Plugin 'marcWeber/vim-addon-mw-utils'     " support tab completion snipmate functionality
@@ -60,7 +61,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'rking/ag.vim'                     " Project search
   Plugin 'scrooloose/nerdtree'              " file menu
   Plugin 'scrooloose/syntastic'             " syntax checker
-  Plugin 'tommcdo/vim-lion'                  " For more better indentation
+  Plugin 'tommcdo/vim-lion'                 " For more better indentation
   " Plugin 'sirVer/ultisnips'
   Plugin 'terryma/vim-multiple-cursors'     " multiple cursors
   Plugin 'tfnico/vim-gradle'                " gradle syntax highlighting
