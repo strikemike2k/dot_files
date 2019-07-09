@@ -79,6 +79,7 @@ alias ls="ls -la"
 
 [[ -s "$HOME/dot_files/include/git_aliases" ]]        && source "$HOME/dot_files/include/git_aliases"
 [[ -s "$HOME/dot_files/include/rails_aliases" ]]      && source "$HOME/dot_files/include/rails_aliases"
+[[ -s "$HOME/dot_files/include/laravel_aliases" ]]    && source "$HOME/dot_files/include/laravel_aliases"
 [[ -s "$HOME/dot_files/include/capistrano_aliases" ]] && source "$HOME/dot_files/include/capistrano_aliases"
 [[ -s "$HOME/dot_files/include/solr_aliases" ]]       && source "$HOME/dot_files/include/solr_aliases"
 [[ -s "$HOME/dot_files/include/functions" ]]          && source "$HOME/dot_files/include/functions"

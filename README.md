@@ -21,6 +21,7 @@ ln -s dot_files/.git-prompt.sh
 ln -s dot_files/.git-completion.bash
 ln -s dot_files/.pryrc
 ln -s dot_files/.agignore
+ln -s dot_files/.zshrc
 ```
 
 Set up vim folders:

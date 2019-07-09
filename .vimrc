@@ -53,6 +53,7 @@ let s:bundle_dir = $v.'/bundle'
   " Plugin 'lifepillar/vim-cheat40'           " 40 column cheat sheet, open with <leader>?
   Plugin 'marcWeber/vim-addon-mw-utils'     " support tab completion snipmate functionality
   Plugin 'mattn/emmet-vim'                  " emmet stuff for vim [http://emmet.io/]
+  Plugin 'mustache/vim-mustache-handlebars' " Mustache and Handlebars syntax highlighting
   Plugin 'mileszs/ack.vim'                  " searching via :Ack
   Plugin 'nathanaelkane/vim-indent-guides'  " Indent guides to keep your code aligned
   Plugin 'nelstrom/vim-textobj-rubyblock'   " Expands upon 'ir' 'ar' to be used in repatition

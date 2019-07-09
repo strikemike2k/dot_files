@@ -202,3 +202,6 @@ color-ssh() {
 }
 alias ssh=color-ssh
 alias noc="tab-reset"
+brb() {
+  open 'https://cdn.dribbble.com/users/410036/screenshots/4689478/brb-dribbble2.gif'
+}
