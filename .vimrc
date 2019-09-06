@@ -320,6 +320,9 @@ let s:bundle_dir = $v.'/bundle'
   " quick switch file
   nnoremap <leader><leader> <c-^>
 
+  " Easy ES6 Javascript on ready function
+  imap <C-f> $(f=>{
+
   " ruby tags
   imap <C-b> binding.pry
   nnoremap <leader>bp O<% binding.pry %><esc>
