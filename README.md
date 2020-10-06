@@ -4,6 +4,12 @@ You know, the basic files under `~/` that begin with a `.`
 Used to keep my computers and mind in sync.
 
 ## Setup
+Install OhMyZSH
+```bash
+cd ~
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 Using Vundle https://github.com/VundleVim/Vundle.vim
 ```bash
 cd ~
