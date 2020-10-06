@@ -6,6 +6,7 @@
 [core]
   editor = /usr/local/bin/vim
   mergeoptions = --no-edit
+  fileMode = false
 [alias]
   co = checkout
   pretty = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'
