@@ -35,6 +35,10 @@ function pr(){
   fi
 }
 
+function catb() {
+  cat $1 | awk "{if (NR>=$2 && NR<=$3) print}"
+}
+
 # hosts sync
 function hostsP() {
   build_hosts

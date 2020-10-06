@@ -1,4 +1,5 @@
 # vim: set filetype=bash
+alias osk='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=https://configure.ergodox-ez.com/moonlander/layouts/omqjl/latest/0'
 
 # Basic
 alias vi=vim
@@ -12,6 +13,8 @@ alias {:q,:Q,:qa}="exit"
 alias bs="bundle show |grep "
 alias fing="sudo"
 alias Kill="sudo kill -s SIGTERM "
+alias fing-dots="find . -type f -name '._*' -exec rm {} +"
+alias perms="sudo chown -R msmith:_www * && sudo chmod -R 775 *"
 
 # Quick edit
 alias oh='   sudo vim ~/hosts.base && build_hosts'
@@ -24,6 +27,7 @@ alias ogit=" vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
 alias {sbash,zbash}="source ~/.zshrc; clear"
 alias bog="  bundle open"
 alias opry=" vim ~/.pryrc"
+alias psd="open -a /Applications/Adobe\ Photoshop\ 2020/Adobe\ Photoshop\ 2020.app"
 
 # Servers
 alias sql=" mysql.server start"

@@ -7,6 +7,8 @@ if s:is_win
   set shell=cmd.exe
   set shellcmdflag=/c
   set encoding=utf-8
+else
+  set shell=/bin/sh
 endif
 
 let s:bundle_dir = $v.'/bundle'
@@ -237,9 +239,15 @@ let s:bundle_dir = $v.'/bundle'
     " colorscheme solarized  " solarized colorscheme
     colorscheme flatlandia   " flatlandia colorscheme
 
-    hi LineNr guifg=#515253 guibg=#2c2f31 guisp=#2c2f31 gui=NONE ctermfg=241 ctermbg=236 cterm=NONE
+    "hi LineNr guifg=#515253 guibg=#2c2f31 guisp=#2c2f31 gui=NONE ctermfg=241 ctermbg=236 cterm=NONE
+    hi LineNr guifg=#515253 guibg=NONE guisp=#2c2f31 gui=NONE ctermfg=241 ctermbg=NONE cterm=NONE
     hi Comment guifg=#60666b guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
     hi Todo guifg=#798188 guibg=NONE guisp=NONE gui=bold ctermfg=15 ctermbg=1 cterm=bold
+    hi Normal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+    hi NonText guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+    "hi Normal guibg=NONE ctermbg=NONE
+    "hi NonText guibg=NONE ctermbg=NONE
+
 
 "= Utilities ======================================================================================
   set noswapfile                     " don't create swap files
@@ -397,7 +405,7 @@ let s:bundle_dir = $v.'/bundle'
   " - down / up / left / right
   let g:fzf_layout = { 'down': '~25%' }
 
-  let $FZF_DEFAULT_COMMAND= 'ag -U -g ""'
+  let $FZF_DEFAULT_COMMAND= 'ag -U --ignore node_modules -g ""'
 
   "- JSX ------------------------------------------------------------------------------------
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files
