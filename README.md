@@ -4,6 +4,8 @@ You know, the basic files under `~/` that begin with a `.`
 Used to keep my computers and mind in sync.
 
 ## Setup
+Install ZSH https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+
 Install OhMyZSH
 ```bash
 cd ~
@@ -48,7 +50,7 @@ vim +PluginInstall +qall
 
 Load your profile settings:
 ```bash
-source ~/.bash_profile
+source ~/.zshrc
 ```
 
 Have `git` remember your credentials:
