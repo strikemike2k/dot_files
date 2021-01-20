@@ -38,7 +38,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'dahu/vim-fanfingtastic'           " Extend tT and fF to multiple lines
   Plugin 'elixir-lang/vim-elixir'
   Plugin 'ervandew/supertab'
-  Plugin 'garbas/vim-snipmate'              " expand code snippits with <tab>
+  " Plugin 'garbas/vim-snipmate'              " expand code snippits with <tab>
   Plugin 'gmarik/Vundle.vim'                " let Vundle manage Vundle, required
   " Plugin 'godlygeek/csapprox'               " better gvim color support
   " Plugin 'godlygeek/tabular'                " for indentation

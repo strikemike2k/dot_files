@@ -30,6 +30,7 @@ ln -s dot_files/.git-completion.bash
 ln -s dot_files/.pryrc
 ln -s dot_files/.agignore
 ln -s dot_files/.zshrc
+ln -s ~/dot_files/strikemike2k.zsh-theme ~/.oh-my-zsh/themes/strikemike2k.zsh-theme
 ```
 
 Set up vim folders:
