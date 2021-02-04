@@ -45,7 +45,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'groenewege/vim-less'              " Less syntax highlighting / indentation
   Plugin 'heartsentwined/vim-emblem'        " emblem syntax & indent
   Plugin 'honza/vim-snippets'               " Snippets to autocomplete from
-  Plugin 'idbrii/vim-mark'                  " Allow for multiple marks
+  " Plugin 'idbrii/vim-mark'                  " Allow for multiple marks
   Plugin 'jordwalke/flatlandia'
   Plugin 'jtratner/vim-flavored-markdown'   " Markdown display good
   Plugin 'junegunn/fzf.vim'

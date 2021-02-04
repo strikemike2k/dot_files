@@ -5,6 +5,7 @@ Used to keep my computers and mind in sync.
 
 ## Setup
 Install ZSH https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+*note: Amazon Linux 2 distro does not come with `chsh` you may need to run `sudo yum install util-linux-user`
 
 Install OhMyZSH
 ```bash
@@ -16,6 +17,7 @@ Using Vundle https://github.com/VundleVim/Vundle.vim
 ```bash
 cd ~
 git clone https://github.com/strikemike2k/dot_files
+ln -s ~/.oh-my-zsh/custom/themes/strikemike2k.zsh-theme ~/dot_files/strikemike2k.zsh-theme
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
