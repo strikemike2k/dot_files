@@ -17,9 +17,7 @@ alias fing-dots="find . -type f -name '._*' -exec rm {} +"
 alias perms="sudo chown -R msmith:_www * && sudo chmod -R 775 *"
 
 # Quick edit
-alias oh='   sudo vim ~/hosts.base && build_hosts'
-alias ohp='  sudo vim ~/hosts.personal && build_hosts'
-alias bh='   build_hosts'
+alias oh='   sudo vim /etc/hosts'
 alias ossh=' sudo vim ~/.ssh/config'
 alias ovim=" vim ~/.vimrc"
 alias {ozsh,obash}="vim ~/.zshrc"

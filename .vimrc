@@ -29,7 +29,7 @@ let s:bundle_dir = $v.'/bundle'
   Plugin 'andrewRadev/splitjoin.vim'        " Multiline to single and back  gS, gJ  TODO Change to new key binding
   Plugin 'andrewRadev/switch.vim'           " Swap true for false and MUCH more
   " Plugin 'andrewRadev/whitespaste.vim'      " Only paste the space that is needved
-  Plugin 'benmills/vimux'                   " Vim + Tmux Goodness
+  " Plugin 'benmills/vimux'                   " Vim + Tmux Goodness
   Plugin 'bling/vim-airline'                " nice looking footer bar
   Plugin 'chriskempson/base16-vim'          " base 16 colorscheme
   Plugin 'christoomey/vim-conflicted'       " Git conflict resolution
