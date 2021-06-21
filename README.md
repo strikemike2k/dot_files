@@ -17,7 +17,6 @@ Using Vundle https://github.com/VundleVim/Vundle.vim
 ```bash
 cd ~
 git clone https://github.com/strikemike2k/dot_files
-ln -s ~/.oh-my-zsh/custom/themes/strikemike2k.zsh-theme ~/dot_files/strikemike2k.zsh-theme
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
