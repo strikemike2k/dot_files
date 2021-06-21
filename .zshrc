@@ -131,5 +131,5 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-source /Users/msmith/.rvm/scripts/rvm
+#source /Users/msmith/.rvm/scripts/rvm
 export PATH="/usr/local/opt/qt/bin:$PATH"
