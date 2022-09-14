@@ -74,12 +74,11 @@ plugins=(
   gitfast
   colorize
   rails
-  zsh-syntax-highlighting
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/dot_files/include/base_aliases.zsh
+source $HOME/dot_files/include/npm_aliases.zsh
 source $HOME/dot_files/include/rails_aliases.zsh
 source $HOME/dot_files/include/laravel_aliases.zsh
 source $HOME/dot_files/include/capistrano_aliases.zsh
@@ -129,7 +128,15 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+RPROMPT="[%D{%Y-%m-%d} | %D{%L:%M:%S}]"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 #source /Users/msmith/.rvm/scripts/rvm
 export PATH="/usr/local/opt/qt/bin:$PATH"
+
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,21 +1,47 @@
 # vim: set filetype=bash
 
-alias gs='git status'
-alias gpo='git pull origin'
-alias gPo='git push origin'
-alias gcos='git checkout staging'
-alias gpos='git pull origin staging'
-alias gcom='git checkout master'
-alias gpom='git pull origin master'
+alias gs="  git status"
+alias gd="  clear && git diff"
+alias gds="  clear && git diff --staged"
+alias gc="  git commit"
+alias gcam="git commit --amend "
+alias gcm='git commit -m '
+alias N='--no-verify'
+alias gca='git commit -am '
+alias gcN=" git commit --no-verify"
+alias gco=" git checkout"
+alias gbn=" git pull origin && git checkout -b"
+alias gcom=" git checkout master"
+alias gcos=" git checkout staging"
+alias ga="  git add"
+alias gap=" git add --patch"
+alias gaa=" git add . && git status"
+alias gaA=" git add . --all && git status"
+alias gr="  git rm"
+alias gu="  git unstage"
+alias gf="  git fetch"
+alias grv=" git remote -v"
+alias gb="  git branch"
+alias grb=" git recentb"
+alias gba=" git branch -a"
+alias gbd=" git branch -d"
 alias gbdm='git branch --merged | egrep -v "(^\*|master|staging)" | xargs git branch -d && gbp'
-alias gbp='git fetch origin --prune'
-alias gd='clear && git diff'
-alias gbn='git branch -M'
-alias gcm='git commit -m'
-alias gms='git merge staging'
-alias gmm='git merge master'
-
+alias gbD=" git branch -D"
+alias gbp=" git fetch origin --prune"
+alias gpo=" git pull origin"
+alias gpom="git pull origin master"
+alias gpos="git pull origin staging"
+alias gPom="git push origin master"
+alias gPos="git push origin staging"
+alias gPo=" git push origin"
+alias gPoN="git push origin --no-verify"
+alias gPn=" git push --set-upstream origin --no-verify"
+alias gm="  git merge"
+alias gms=" git merge staging"
+alias gmm=" git merge master"
+alias gmd=" git merge develop"
 alias gl=" git log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'"
 alias glm=" git log --author='$(git config user.name)' --pretty=format:'%C(yellow)%h%C(reset) [%C(green)%ar%C(reset)] %s'"
-
-alias overview='open "https://github.com/strikemike2k?tab=overview&from='$(date '+%Y-%m-%d')'"'
+alias overview='open "https://github.com/$(git config user.name)?a=a&tab=overview&from='$(date '+%Y-%m-%d')'"'
+# GemFury
+alias {gPf,gPfm}="git push fury master"

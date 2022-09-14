@@ -94,6 +94,10 @@ let s:bundle_dir = $v.'/bundle'
   " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plugin 'Xuyuanp/nerdtree-git-plugin'      " NERDTree display changes via git
 
+  " Vim TypeScript
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'peitalin/vim-jsx-typescript'
+
   " end Vundle init (required )"
   call vundle#end()
   filetype plugin indent on

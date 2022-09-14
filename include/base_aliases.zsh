@@ -15,6 +15,7 @@ alias fing="sudo"
 alias Kill="sudo kill -s SIGTERM "
 alias fing-dots="find . -type f -name '._*' -exec rm {} +"
 alias perms="sudo chown -R msmith:_www * && sudo chmod -R 775 *"
+alias {archive,compress}="tar -czvf"
 
 # Quick edit
 alias oh='   sudo vim /etc/hosts'
@@ -28,36 +29,31 @@ alias opry=" vim ~/.pryrc"
 alias psd="open -a /Applications/Adobe\ Photoshop\ 2020/Adobe\ Photoshop\ 2020.app"
 
 # Servers
+alias ns="  npm start"
 alias sql=" mysql.server start"
 alias ssnr="sudo service nginx restart"
 alias ssrn="sudo systemctl restart nginx"
 alias sshr="sudo service httpd restart"
 alias ssar="sudo service apache2 restart"
 
-# SSH to AWS
-alias saws="ssh ec2-user@aws"
-alias sd="  ssh ubuntu@dev"
-alias sp="  ssh ubuntu@nsr"
-alias jsp=" ssh ubuntu@journal"
-alias spr=" ssh ubuntu@rails"
-
-# SSH
-alias smaxapi='ssh -t root@45.79.108.188'
-alias smaxwp=' ssh -t root@198.58.126.101'
-
-# Time
-alias retime="sudo ntpdate time.nist.gov"
-alias msttime="sudo rm /etc/localtime; sudo ln -s /usr/share/zoneinfo/America/Denver /etc/localtime"
-alias fixtime="sudo timedatectl set-timezone America/Denver"
+alias pws="METEOR_OFFLINE_CATALOG=1 meteor run --settings dev-settings.json  --no-release-check  --exclude-archs web.browser.legacy"
 
 # Mac OS 120.12.6 (16G29)
 alias clear_dns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;"
 
 # Movement
-alias cdg="cd ~/git"
 alias cdd="cd ~/dot_files"
+alias pw="cd ~/code/prendaverse/prendaworld"
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
 
 # ls aliases
-alias ll="ls -lh"
-alias la="ls -lah"
-alias ls="ls -la"
+alias ll="ls --color=auto -lh"
+alias la="ls --color=auto -lah"
+alias ls="ls --color=auto -la"
+alias llm="ls --color=auto -al | more"
