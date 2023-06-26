@@ -1,12 +1,13 @@
 [user]
   name = Michael Smith
   email = strikemike2k@gmail.com
+  signingkey = 67AA523EE854847F
 [push]
   default = simple
 [core]
   editor = /usr/bin/vim
   mergeoptions = --no-edit
-  fileMode = false
+	filemode = false
 [alias]
   co = checkout
   pretty = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'
@@ -33,3 +34,5 @@
   trustExitCode = true
 [commit]
   gpgsign = false
+#[gpg]
+# format = ssh

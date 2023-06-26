@@ -57,3 +57,6 @@ alias ll="ls --color=auto -lh"
 alias la="ls --color=auto -lah"
 alias ls="ls --color=auto -la"
 alias llm="ls --color=auto -al | more"
+
+# Special
+alias resource="set -o allexport && source .env && set +o allexport"
